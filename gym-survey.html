@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         body {
+         font-family: sans-serif;
+         color: white;
+         }
+         form {
+         margin: 1.5rem 10rem 1.5rem 10rem;
+         padding: 2.5rem 5rem 2.5rem 5rem;
+         background: #595959;
+         }
+         h1, p {
+         margin-top: 1rem;
+         margin-bottom: 0.5rem;
+         }
+         h1 {
+         font-weight: 400;
+         }
+         p {
+         font-size: 1.125rem;
+         }
+         label {
+         display: flex;
+         align-items: center;
+         font-size: 1.125rem;
+         margin: 0.5rem;
+         }
+         .text-center {
+         text-align: center;
+         }
+         .form-group {
+         margin: 0 auto 1.25rem auto;
+         padding: 0.25rem;
+         }
+         .form-control {
+         display: block;
+         width: auto;
+         padding: 0.375rem 0.75rem;
+         border-radius: 0.25rem;
+         }
+         .clue {
+         font-size: 0.9rem;
+         margin-left: 0.25rem;
+         }
+         .input-radio, .input-checkbox {
+         display: inline-block;
+         margin-right: 0.625rem;
+         min-height: 1.25rem;
+         min-width: 1.25rem;
+         }
+         .input-textarea {
+         min-height: 120px;
+         width: 100%;
+         padding: 0.625rem;
+         resize: vertical;
+         }
+         .submit-button {
+         display: block;
+         width: 100%;
+         padding: 0.75rem;
+         background: #802000;
+         border-radius: 2px;
+         font-size: 1.5rem;
+         cursor: pointer;
+         }
+         .container {
+         width: 100%;
+         background: #b3b3b3;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="container">
+         <header class="header">
+            <h1 id="title" class="text-center">Gym Habits</h1>
+            <p id="description" class="description text-center"> Thank you for letting us gather data on the meatheads </p>
+         </header>
+         <form id="survey-form">
+            <div class="form-group">
+               <label id="name-label" for="name">Name</label>
+               <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+               <label id="email-label" for="email">Email</label>
+               <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+               <label id="number-label" for="number">Age (optional)</label>
+               <input type="number" name="age" id="number" min="16" max="99" class="form-control" placeholder="Age">
+            </div>
+            <div class="form-group">
+               <p> What is your favorite compound exercise? </p>
+               <select id="dropdown" name="exercise" class="form-control" required>
+                  <option disabled selected value>Favorite compound exercise</option>
+                  <option value="Squat">Squat</option>
+                  <option value="Deadlift">Deadlift</option>
+                  <option value="Bench press">Bench press</option>
+                  <option value="Pull up">Pull up</option>
+                  <option value="Push up">Push up</option>
+                  <option value="Dips">Dips</option>
+                  <option value="Military press">Military press</option>
+                  <option value="Other">Other</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <p> Do you warm up before starting your heavy sets? </p>
+               <label>
+               <input name="warmup" value="Of course" type="radio" class="input-radio" checked> Of course
+               </label>
+               <label> 
+               <input name="warmup" value="Sometimes" type="radio" class="input-radio"> Sometimes
+               </label>
+               <label>
+               <input name="warmup" value="Warm up is for p*ssies"type="radio" class="input-radio"> Warm up is for p*ssies
+               </label>
+            </div>
+            <div class="form-group">
+               <p> What kind of muscle groups do you train regularly? <span class="clue"> (Check those that you do)</span>
+               </p>
+               <label>
+               <input name="musclegroups" value="Chest" type="checkbox" class="input-checkbox"> Chest
+               </label>
+               <label>
+               <input name="musclegroups" value="Upper-back" type="checkbox" class="input-checkbox"> Upper-back
+               </label>
+               <label>
+               <input name="musclegroups" value="Lower-back" type="checkbox" class="input-checkbox"> Lower-back
+               </label>
+               <label>
+               <input name="musclegroups" value="Glutes" type="checkbox" class="input-checkbox"> Glutes
+               </label>
+               <label>
+               <input name="musclegroups" value="Quads" type="checkbox" class="input-checkbox"> Quads
+               </label>
+               <label>
+               <input name="musclegroups" value="Hamstrings" type="checkbox" class="input-checkbox"> Hamstrings
+               </label>
+               <label>
+               <input name="musclegroups" value="Calves" type="checkbox" class="input-checkbox"> Calves
+               </label>
+               <label>
+               <input name="musclegroups" value="Shoulders" type="checkbox" class="input-checkbox"> Shoulders
+               </label>
+               <label>
+               <input name="musclegroups" value="Biceps" type="checkbox" class="input-checkbox"> Biceps
+               </label>
+               <label>
+               <input name="musclegroups" value="Triceps" type="checkbox" class="input-checkbox"> Triceps
+               </label>
+               <label>
+               <input name="musclegroups" value="Abs" type="checkbox" class="input-checkbox"> Abs
+               </label>
+               <label>
+               <input name="musclegroups" value="Neck" type="checkbox" class="input-checkbox"> Neck
+               </label>
+               <label>
+               <input name="musclegroups" value="Forearms" type="checkbox" class="input-checkbox"> Forearms
+               </label>
+            </div>
+            <div class="form-group">
+               <p> What would you reccommend a younger you about gym habits? </p>
+               <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+               <button type="submit" id="submit" class="submit-button"> Submit
+               </button>
+            </div>
+         </form>
+      </div>
+   </body>
+</html>
